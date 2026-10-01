@@ -6,3 +6,39 @@ Broke: Restricted Mode, main() not being called
 Enjoyed (1–10): 6 
 Bored (1–10): 1
 Hours: ~ 2 hours 
+
+## Day 1 — Sep 28 (Mon)
+Built: Watched Missing Semester lecture 1 (The Shell), 33 of 48 min. Practised navigating with cd, ls, pwd.
+Broke: cd ./Users failed because ./ means "inside the current folder". open vs code failed because spaces split it into two names.
+Learned: Absolute paths (start with /) vs relative paths. On Linux, hardware appears as files in /sys (LEDs, brightness), like memory-mapped registers.
+Decided: Build quietly for the first few weeks, post later. Pause the AWS Cloud Practitioner course until Week 4.
+Enjoyed (1–10): 3
+Bored (1–10): 7 
+Hours: 3
+
+## Day 2 — Sep 29 (Tue)
+Built: Learn Git Branching, levels 1–4 (commits, branches, merge, rebase). Finished the rest of the shell lecture.
+Broke: Started out guessing; checked out a commit instead of a branch; used git branch (creates only) instead of git checkout -b (creates and switches).
+Learned: Commits are snapshots, branches are sticky notes, HEAD is "you are here". Merge joins two lines; rebase replays work into a straight line.
+Enjoyed (1–10): 10 
+challenging (1-10): 7 
+Bored (1–10): 2
+Hours: 3
+
+## Day 3 — Sep 30 (Wed)
+Built: Weather script Step 1. Fetched live Limerick weather from the Open-Meteo API with requests (status 200).
+Broke: NameError from a typo (parmas vs params). Learned to read errors from the bottom line up.
+Learned: JSON comes back as dictionaries and lists. The data is in UTC, not Irish time.
+Decided: Signature project theme is transport: a Limerick bus reliability tracker using NTA open data.
+Enjoyed (1–10): 8
+challenging (1-10): 4
+Hours: 2 
+
+## Day 4 — Oct 1
+Built: Weather script Step 2. Pulled 48 hours of Limerick weather and summarised it: warmest, coldest, average temperature, total rain. Turned columns into rows with zip, filtered rainy hours with an if inside the loop, and filtered yesterday's data by date with startswith.
+Broke: The rain check printed nothing because the if was outside the loop. Learned that indentation decides what belongs to the loop (Python's version of { } in C).
+Learned: The API gives columns, zip gives rows. Timestamps are in UTC, not Irish time. Filtering by a condition is the same idea as WHERE in SQL.
+Decided: Stop mass-applying; apply only to roles that fit, embedded only with a referral. Build strong evidence and solid basics. Check visa options this week.
+Enjoyed (1–10): 8 — it was genuinely fun
+Challenging (1-10): 8
+Hours: 2 
