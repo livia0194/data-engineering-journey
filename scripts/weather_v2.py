@@ -28,13 +28,14 @@ def main():
     # 2. Same questions as before, the DataFrame way
     print(df.select(pl.col("temperature_2m").mean()))
     print(df.filter(pl.col("precipitation") > 0))
+    print(df.filter(pl.col("temperature_2m")>15))
 
     # 3. Save it to a file
     out_dir = Path("data/raw") / str(date.today())
     out_dir.mkdir(parents=True, exist_ok=True)
     df.write_parquet(out_dir / "weather.parquet")
     print("Saved to", out_dir)
-
+    
 
 if __name__ == "__main__":
     main()
