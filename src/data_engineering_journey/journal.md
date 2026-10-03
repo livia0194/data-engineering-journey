@@ -42,3 +42,11 @@ Decided: Stop mass-applying; apply only to roles that fit, embedded only with a 
 Enjoyed (1–10): 8 — it was genuinely fun
 Challenging (1-10): 8
 Hours: 2 
+## Day 5 — Oct 3 (Sat)
+Built: Fixed the timezone (timezone: Europe/Dublin), so times now match Irish clock time. Built weather_v2.py: turned the hourly data into a Polars DataFrame (48 rows × 3 columns), converted time text to real datetimes, calculated the average with .mean(), filtered rainy hours with .filter(), and saved the table as a Parquet file in data/raw/2026-10-03. Found 6 rainy hours yesterday afternoon, with a 5.8 mm downpour at 16:00.
+Broke: Nothing in the code. The block was in my head: a "you're not ready, understand everything first" voice right before starting Part 2.
+Learned: My first full ETL pipeline: Extract (API) → Transform (table + types) → Load (Parquet). What requests.get, status codes, params=... and the nested JSON keys mean. Understanding comes AFTER doing, not before.
+Noticed: My "not ready / too hard midway" pattern showed up live. I named it, panicked a bit, took a break, came back and did it anyway. Bringing this to my therapist.
+Enjoyed (1–10):3
+Zoned out (1–10): 8
+Hours:~ 2 hours 
