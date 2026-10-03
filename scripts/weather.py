@@ -2,17 +2,19 @@ import requests
 
 URL = "https://api.open-meteo.com/v1/forecast"
 
-params = {
+ams = {
     "latitude": 52.66,      # Limerick
     "longitude": -8.63,
     "hourly": "temperature_2m,precipitation",
     "past_days": 1,
     "forecast_days": 1,
+    "timezone": "Europe/Dublin",
+
 }
 
 
 def main():
-    response = requests.get(URL, params=params)
+    response = requests.get(URL, params=ams)
     print("Status code:", response.status_code)
 
     data = response.json()
@@ -21,6 +23,8 @@ def main():
     temps = hourly["temperature_2m"]
     rain = hourly["precipitation"]
 
+    print("data:", data.keys())
+    print("hourly:", hourly.keys())
     print("Hours of data:", len(times))
     print("First hour:", times[0], temps[0], "°C")
     print("Warmest:", max(temps), "°C")
