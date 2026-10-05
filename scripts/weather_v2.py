@@ -23,7 +23,7 @@ def main():
     # 1. Build a table from the hourly data
     df = pl.DataFrame(data["hourly"])
     df = df.with_columns(pl.col("time").str.to_datetime())
-    print(df)
+    print("data frame",df)
 
     # 2. Same questions as before, the DataFrame way
     print(df.select(pl.col("temperature_2m").mean()))
