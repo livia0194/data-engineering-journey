@@ -50,3 +50,17 @@ Noticed: My "not ready / too hard midway" pattern showed up live. I named it, pa
 Enjoyed (1–10):3
 Zoned out (1–10): 8
 Hours:~ 2 hours 
+## Day 6 — Oct 4 (Sun, travelling to Wicklow)
+Built: explore.py. Loaded my saved weather table back from the Parquet file (no internet needed) with pl.read_parquet, then sorted it with .sort().
+Broke: df.sort(...) on its own line didn't change anything. Learned that sort/filter return a NEW table, so I need print(df.sort(...)) or df = df.sort(...).
+Learned: Coldest hour was 8am on 3 Oct (7.1°C), just after sunrise, not midnight. How rain is measured (tipping-bucket gauge = pulse counter, like GPIO interrupts). Read a row as a sentence: check the column names first.
+Ideas: Touch-based emotion sensing while scrolling (affective computing), flipped to help the user take a break. Links to my haptics MSc.
+Enjoyed (1–10): 10 on 10
+Hours: 1 hour 
+
+## Day 7 — Oct 5 (Mon)
+Built: sql_play.py. First SQL queries with DuckDB directly on my Parquet file: rainy hours (6 rows), warm hours >15°C (11 rows, written by me), sorted hottest first.
+Learned: SELECT, FROM, WHERE, ORDER BY ... DESC. Same question three ways: Python if, Polars .filter(), SQL WHERE. Polars prints "shape" automatically (rows, columns). .str.to_datetime() turns text into a real date-time; Python's str() does the opposite.
+Broke: Ran the wrong file and wondered why my print didn't show. The terminal only shows output from the file I run.
+Enjoyed (1–10): 8
+Hours: 1 hour 
